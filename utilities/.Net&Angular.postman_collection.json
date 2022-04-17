@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "4d8a1357-7b73-4de7-97a1-bb82c4031842",
+		"name": ".Net&Angular",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "obtenerUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:49146/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49146",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserName\": \"PRUEBA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:49146/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49146",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificarUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\": 1,\r\n    \"UserName\": \"PRUEBA-Modificado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:49146/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49146",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:49146/api/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49146",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Documens",
+			"item": [
+				{
+					"name": "obtenerDocumentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:49146/api/document",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49146",
+							"path": [
+								"api",
+								"document"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearDocumento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DocumentFile\": \"image.png\",\r\n    \"DocumentState\": \"state-test\",\r\n    \"DocumentDate\": \"2022-04-16\",\r\n    \"UserName\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:49146/api/document",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49146",
+							"path": [
+								"api",
+								"document"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificarDocumento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DocumentId\": 3,\r\n    \"DocumentFile\": \"imageeeee.png\",\r\n    \"DocumentState\": \"state-testeeeee\",\r\n    \"DocumentDate\": \"2022-04-16\",\r\n    \"UserName\": \"ADMIN-Modificado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:49146/api/document",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49146",
+							"path": [
+								"api",
+								"document"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarDocumento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:49146/api/document/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49146",
+							"path": [
+								"api",
+								"document",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subirArchivo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Documentos de Usuario/OneDrive - AGUAS DE MANIZALES SA ESP/Imágenes/persona1.jpeg"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:49146/api/document/GuardarArchivo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49146",
+							"path": [
+								"api",
+								"document",
+								"GuardarArchivo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
